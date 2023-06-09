@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background: black;
+            height: 6000px;
+            font-family: 'nanumsqaure';
+        }
+
+        div {
+            width: 100%;
+            margin-top: 1000px; 
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.8s;
+        }
+
+    </style>
+
+    <div><h1>아니 이럻수가</h1></div>
+    <div><h1>태연씨가 군대를 가신다구요?</h1></div>
+    <div><h1>놀랍게도 현실이였습니다 짜잔!</h1></div>
+    <div><img src="사진/굳건이.jpg"></div>
+    <div><h1>호우!</h1></div>
+
+    <script>
+
+        let observer = new IntersectionObserver((e)=>{
+            e.forEach((goodgun)=>{
+                if (goodgun.isIntersecting){
+                goodgun.target.style.opacity = 1;
+                }
+                else{
+                    goodgun.target.style.opacity = 0;
+                }
+            }) 
+        })
+
+        let div = document.querySelectorAll('div')
+        for(let i=0; i<100; i++){
+            observer.observe(div[i])
+        }
+
+    </script>
+    
+</body>
+</html> 

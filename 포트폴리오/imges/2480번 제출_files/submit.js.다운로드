@@ -1,0 +1,61 @@
+$(function() {
+    $('#submit_preview').hide();
+    $('#submit_button').show();
+    $('#submit_form').submit(function(e) {
+        e.preventDefault();
+        if ($('#submit_button').hasClass('disabled')) {
+            return;
+        }
+        $('#submit_button').button('loading');
+        var n = submit_rules.length;
+        OnlineJudgeCodeMirror.save();
+        var ans = $(this).serializeArray();
+        var source = '';
+        var language = -1;
+        ans.forEach(function(arr) {
+            if (arr['name'] == 'source') {
+                source = arr['value'];
+            } else if (arr['name'] == 'language') {
+                language = parseInt(arr['value']);
+            }
+        });
+        if (source.startsWith('https://upload.acmicpc.net/')) {
+            n = 0;
+        }
+        var ok = true;
+        for (var i=0; i<n; i++) {
+            var cur = submit_rules[i];
+            var l = parseInt(cur['language']);
+            if (language == l) continue;
+            var keyword = cur['keyword'];
+            var alert = parseInt(cur['alert']);
+            if (source.indexOf(keyword) !== -1) {
+                if (alert == 0) {
+                    $('#language').val(l).trigger("chosen:updated");;
+                } else {
+                    ok = false;
+                    $('#submit-modal .rule-button').attr('data-language',l); 
+                    $('#submit-modal .rule-keyword').text(keyword);
+                    $('#submit-modal .rule-language').text(cur['language_name']);
+                    $('#submit-modal .source-language').text($('#language').find('option:selected').text());
+                    $('#submit-modal .source-button').attr('data-language',language); 
+                    MicroModal.show('submit-modal');
+                }
+                break;
+            }
+        }
+        if (ok) {
+            $('#submit_form').unbind('submit').submit();
+        }
+    });
+    $('#submit-modal footer.modal__footer button').click(function(e) {
+        if ($(this).hasClass('close-button')) {
+            $('#submit_button').button('reset');
+        } else {
+            var lang = $(this).attr('data-language');
+            $('#language').val(lang).trigger("chosen:updated");;
+            $('#submit_form').unbind('submit').submit();
+        }
+        MicroModal.close('submit-modal');
+    });
+});

@@ -1,0 +1,222 @@
+@font-face {
+    font-family:'BMHANNAProOTF' ;
+    src: url(fonts/BMHANNAProOTF.otf);
+    src: url()
+}
+
+*{padding:0;margin:0}
+*{font: "BMEuljiro10yearslater";}
+li{list-style:none}
+a{text-decoration:none;font-size:14px}
+
+a:visited{color: #fff;}
+a:link{color: #fff;}
+
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login{
+    text-align: right;
+    right: 50px;
+    color: #fff;
+}
+/* .login div a{
+    color: #fff;
+} */
+header {
+    background-image: url(image/5.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* nav {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block; 
+    width: 100%; 
+    text-align: center; 
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #444;
+} */
+
+/* .menu {
+width: 100%;
+overflow: hidden;
+}
+
+.menu > li {
+    width: 20%; 
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: #333;
+    }
+
+.menu a {
+    color: #fff;
+    }
+
+.submenu > li {
+    line-height: 50px;
+    background-color: #4b4a4a;
+    }
+
+.submenu {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    /* overflow: hidden;
+    }
+.menu > li:hover {
+    background-color: #4b4a4a;
+    transition-duration: 0.5s;
+    }
+
+.menu > li:hover .submenu {
+    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+    /* transition-duration: 1s;
+    z-index: 1;
+    } */ 
+
+nav {
+    background-color: #2e3e57;
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+nav li {
+    z-index: 1;
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+    border-right: 1px solid #ffffff;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
+}
+nav a:hover {
+    background-color: #2e3e57;
+}
+nav ul ul{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+    background-color: #2e3e57;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+nav ul ul li {
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    width: 302px;
+}
+.community{
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    width: 329.5px;
+}
+
+nav ul ul li:last-child {
+    border-bottom: none;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+
+
+
+.section1 {
+    z-index: 0;
+    margin: 20px;
+    padding: 20px;
+    background-color: #23324ade;
+    box-shadow: 0 0 10px #888888;
+    color: #fff;
+}
+.jack{
+    font-family: "BMHANNAProOTF";
+    font-size: 22px;
+    font-weight: 20px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 15%;
+}
+.jack1{
+    z-index: 0;
+    font-family: "BMHANNAProOTF";
+    font-size: 22px;
+    font-weight: 20px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 7%;
+
+}
+.jack3h4{
+    text-align: center;
+}
+.img1{
+    align-items: center;
+}
+.rumdiv{
+    text-align: center;
+}
+.section2 {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2e3e57;
+    box-shadow: 0 0 10px #888888;
+    text-align: right;
+}
+    

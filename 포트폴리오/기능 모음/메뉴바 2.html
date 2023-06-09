@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>메뉴바</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		nav {
+			background-color: #333333;
+			color: #ffffff;
+			height: 50px;
+			line-height: 50px;
+			padding: 0 20px;
+			position: relative;
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+		}
+		nav li {
+			position: relative;
+			flex-grow: 1;
+			text-align: center;
+		}
+		nav a {
+			color: #ffffff;
+			text-decoration: none;
+			display: block;
+			padding: 0 20px;
+			border-right: 1px solid #ffffff;
+			box-sizing: border-box;
+			transition: background-color 0.2s ease-in-out;
+		}
+		nav a:hover {
+			background-color: #444444;
+		}
+		nav ul ul{
+			position: absolute;
+			top: 50px;
+			left: 0;
+			display: none;
+			background-color: #333333;
+			padding: 0;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+		nav ul ul li {
+			display: block;
+			text-align: left;
+			padding: 10px;
+			border-bottom: 1px solid #ffffff;
+			width: 600px;
+			/*height: 200px;*/
+		}
+		nav ul ul li:last-child {
+			border-bottom: none;
+		}
+		nav ul li:hover > ul {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">로비</a></li>
+			<li><a href="#">정보</a>
+				<ul>
+					<li><a href="#">부적</a></li>
+					<li><a href="#">아이템</a></li>
+					<li><a href="#">보스</a></li>
+				</ul>
+			</li>
+			<li><a href="#">커뮤니티</a></li>
+		</ul>
+	</nav>
+	<!-- <script>
+		var menu = document.querySelector('nav ul');
+		var menuButton = document.createElement('button');
+		menuButton.innerHTML = '☰';
+		menuButton.addEventListener('click', function() {
+			menu.classList.toggle('show');
+		});
+		document.querySelector('nav').appendChild(menuButton);
+	</script> -->
+</body>
+</html>

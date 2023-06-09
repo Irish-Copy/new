@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 3000px;
+            font-family: "nanumsqaure";
+            background-color: black;
+        }
+        div{
+            width: 100%;
+            margin-top: 1000px; 
+            margin-left: 200px;
+            color: white;
+            text-align: center;
+            transform: translateX(-10%);
+            opacity: 0;
+            transition: all 1s;
+        }
+        h4{
+            text-align: left;
+            margin-left: 50px;
+            left: 50px;
+            top: 10px;
+        }
+        .imge1{
+            float: left;
+        }
+        .p1{
+            clear: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h4>hollowknight</h4>
+        <img class ="imge1" src="imges/banner.jfif" >
+        <p class="p1">
+        쇠퇴해가는 흙의 마을 아래 고대의 곤충 왕국 신성둥지가 잠들어 있습니다.
+        많은 이들이 부를, 명예를, 오래된 비밀의 답을 찾아 지하세계를 탐험해왔습니다.
+        이제 폐허에서 무엇인가가 깨어나 벌레들을 미치게 만들고 여행자들의 이성을 앗아가고 있습니다.
+        이 새로운 전염병의 원천은 무엇일까요? 한때 위대했던 왕국을 쓰러뜨린 재앙은 무엇이었을까요?
+        이 미스테리를 해소하려면 바닥모를 깊은 곳으로의 여행을 시작해야하지만, 어떤 비밀들은 밝혀지지 않는 것이 좋을지도 모릅니다…
+        </p>
+    </div>
+    <div>
+        <h4>hollowknight</h4>
+        <img class ="imge1" src="imges/banner.jfif" >
+        <p class="p1">
+        쇠퇴해가는 흙의 마을 아래 고대의 곤충 왕국 신성둥지가 잠들어 있습니다.
+        많은 이들이 부를, 명예를, 오래된 비밀의 답을 찾아 지하세계를 탐험해왔습니다.
+        이제 폐허에서 무엇인가가 깨어나 벌레들을 미치게 만들고 여행자들의 이성을 앗아가고 있습니다.
+        이 새로운 전염병의 원천은 무엇일까요? 한때 위대했던 왕국을 쓰러뜨린 재앙은 무엇이었을까요?
+        이 미스테리를 해소하려면 바닥모를 깊은 곳으로의 여행을 시작해야하지만, 어떤 비밀들은 밝혀지지 않는 것이 좋을지도 모릅니다…
+        </p>
+    </div>
+    <div>
+        <h4>hollowknight</h4>
+        <img class ="imge1" src="imges/banner.jfif" >
+        <p class="p1">
+        쇠퇴해가는 흙의 마을 아래 고대의 곤충 왕국 신성둥지가 잠들어 있습니다.
+        많은 이들이 부를, 명예를, 오래된 비밀의 답을 찾아 지하세계를 탐험해왔습니다.
+        이제 폐허에서 무엇인가가 깨어나 벌레들을 미치게 만들고 여행자들의 이성을 앗아가고 있습니다.
+        이 새로운 전염병의 원천은 무엇일까요? 한때 위대했던 왕국을 쓰러뜨린 재앙은 무엇이었을까요?
+        이 미스테리를 해소하려면 바닥모를 깊은 곳으로의 여행을 시작해야하지만, 어떤 비밀들은 밝혀지지 않는 것이 좋을지도 모릅니다…
+        </p>
+    </div>
+    <script>
+        let observer = new IntersectionObserver((e)=>{
+            e.forEach((object)=>{
+                if (object.isIntersecting){
+                object.target.style.opacity = 1;
+                }
+                else{
+                    object.target.style.opacity = 0;
+                }
+            }) 
+        })
+
+        let div = document.querySelectorAll('div')
+        for(let i=0; i<100; i++){
+            observer.observe(div[i])
+        }
+    </script>
+</body>
+</html>
